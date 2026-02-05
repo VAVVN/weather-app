@@ -7,12 +7,11 @@ async function getWeatherData(location) {
         const response = await fetch(url);
         const data = await response.json();
         console.log(data);
+        const weather = processWeatherData(data);
+        updateWeatherUI(weather);
     } catch (error) {
         console.error('Error fetching weather data:', error);
     }
-
-    const weather = processWeatherData(data);
-    updateWeatherUI(weather);
 }
 
 document.getElementById('get-weather-btn').addEventListener('click', () => {
