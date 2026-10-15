@@ -20,7 +20,7 @@
         //Write the functions that hit the API. You’re going to want functions that can take a location and return the weather data for that location. For now, just console.log() the information.
         async function getWeatherData(location) {
             const apiKey = 'dc8ec0d2acb3438a927133625260502';
-            const url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}`;
+            const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}`;
 
             try {
                 const response = await fetch(url);
